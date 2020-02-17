@@ -1,5 +1,6 @@
-
-
+/**
+ * Configuration of build types.
+ */
 interface BuildType {
 
     companion object {

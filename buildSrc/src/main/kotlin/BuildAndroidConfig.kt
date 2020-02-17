@@ -1,5 +1,7 @@
 
-
+/**
+ * Configuration of android build.
+ */
 object BuildAndroidConfig {
     const val APPLICATION_ID = "com.stegner.woodsman"
 

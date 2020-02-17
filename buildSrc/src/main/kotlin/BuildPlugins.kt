@@ -1,4 +1,6 @@
-
+/**
+ * Configuration of all gradle build plugins.
+ */
 object BuildPlugins {
     const val ANDROID_APPLICATION = "com.android.application"
 

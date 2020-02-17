@@ -1,6 +1,7 @@
 
 plugins {
     `kotlin-dsl`
+    `kotlin-dsl-precompiled-script-plugins`
 }
 
 repositories{
@@ -13,7 +14,7 @@ kotlinDslPluginOptions{
 }
 
 object PluginVersions {
-    const val GRADLE_ANDROID = "3.6.0-rc02"
+    const val GRADLE_ANDROID = "3.6.0-rc03"
     const val KOTLIN = "1.3.61"
 }
 

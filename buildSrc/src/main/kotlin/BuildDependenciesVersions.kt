@@ -1,6 +1,6 @@
-
-
-
+/**
+ * Configuration version of all dependencies.
+ */
 object BuildDependenciesVersions {
     const val KOTLIN = "1.3.61"
 

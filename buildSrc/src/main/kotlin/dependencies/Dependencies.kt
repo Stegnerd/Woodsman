@@ -2,6 +2,9 @@
 
 package dependencies
 
+/**
+ * Project dependencies.
+ */
 object Dependencies {
 
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${BuildDependenciesVersions.KOTLIN}"

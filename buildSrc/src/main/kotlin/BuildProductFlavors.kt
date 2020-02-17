@@ -2,6 +2,9 @@
 import com.android.build.gradle.internal.dsl.ProductFlavor
 import org.gradle.api.NamedDomainObjectContainer
 
+/**
+ * Configuration of different build types of the app.
+ */
 interface BuildProductFlavor {
     val name: String
 
@@ -10,7 +13,7 @@ interface BuildProductFlavor {
     fun appCreate(namedDomainObjectContainer: NamedDomainObjectContainer<ProductFlavor>):ProductFlavor
 }
 
-object ProductFavorDev : BuildProductFlavor {
+object ProductFlavorDev : BuildProductFlavor {
     override val name = "dev"
 
     override fun appCreate(namedDomainObjectContainer: NamedDomainObjectContainer<ProductFlavor>):ProductFlavor {
