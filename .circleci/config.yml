@@ -5,7 +5,11 @@ orbs:
 jobs:
   build:
     executor: android/android
-
+    branches:
+      only:
+        - dev
+        - master
+        - /feature-.*/
     steps:
       - checkout
       - run:
