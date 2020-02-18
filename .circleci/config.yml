@@ -1,8 +1,5 @@
 
 version: 2.1
-orbs:
-  # default android configuration from circleci
-  android: circleci/android@0.2.0
 jobs:
   build:
     working_directory: ~/Woodsman
