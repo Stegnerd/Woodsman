@@ -8,8 +8,8 @@ jobs:
       - image: circleci/android:api-29
     steps:
       - checkout
+      # load project dependencies from cache
       - restore_cache:
-          # attempt to pull packages from cache to save time
           key: gradle-{{ checksum "build.gradle.kts" }}
       - run:
           # give circleci permission to run files
