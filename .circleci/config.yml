@@ -8,9 +8,6 @@ jobs:
       - image: circleci/android:api-29
     steps:
       - checkout
-      # load project dependencies from cache
-      - restore_cache:
-          key: gradle-{{ checksum "build.gradle.kts" }}
       - run:
           # give circleci permission to run files
           name: CHMOD permissions
@@ -19,8 +16,3 @@ jobs:
           # make sure the project builds
           name: Build Project
           command: ./gradlew build
-      - save_cache:
-          # save updated cache
-          paths:
-            - ~/.gradle
-            - key: gradle-{{ checksum "build.gradle.kts" }}
