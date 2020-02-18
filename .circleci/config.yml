@@ -8,4 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
+          name: CHMOD permissions
+          command: chmod +x ./gradlew
+      - run:
+          name: Build Project
           command: ./gradlew build
