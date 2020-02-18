@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/Woodsman
     docker:
-      - # running an image of android 10
+      # running an image of android 10
       - image: circleci/android:api-29
     steps:
       - checkout
