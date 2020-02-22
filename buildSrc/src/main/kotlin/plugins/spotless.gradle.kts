@@ -46,7 +46,7 @@ configure<SpotlessExtension> {
     // Formatting declared for xml files
     format("xml") {
         target("**/res/**/*.xml")
-        indentWithTabs(4)
+        indentWithSpaces(4)
         trimTrailingWhitespace()
         endWithNewline()
     }
