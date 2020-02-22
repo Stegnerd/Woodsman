@@ -1,7 +1,7 @@
 
 version: 2.1
 jobs:
-dbuild:
+build:
   working_directory: ~/Woodsman
   docker:
   # running an image of android 10
@@ -35,7 +35,7 @@ dbuild:
   - run:
     # run lint to check all code fits code standards
     name: Run Lint
-    command: ./gradlew lint
+    command: ./gradlew lintDevDebug
   # save updated cache
   - save_cache:
     paths:
