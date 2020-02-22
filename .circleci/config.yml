@@ -11,33 +11,33 @@ jobs:
     # load project dependencies from cache
     # https://circleci.com/docs/2.0/caching/
       - restore_cache:
-        key: gradle-{{ checksum "build.gradle.kts" }}
+          key: gradle-{{ checksum "build.gradle.kts" }}
       - run:
-      # give circleci permission to run files
-        name: CHMOD permissions
-        command: chmod +x ./gradlew
+          # give circleci permission to run files
+          name: CHMOD permissions
+          command: chmod +x ./gradlew
       - run:
-      # make sure the project builds
-        name: Build Project
-        command: ./gradlew build
+          # make sure the project builds
+          name: Build Project
+          command: ./gradlew build
       - run:
-      # run all unit tests
-        name: Run Unit Tests
-        command: ./gradlew test
+          # run all unit tests
+          name: Run Unit Tests
+          command: ./gradlew test
       - run:
-        # run detekt to check for code smell and static analysis
-        name: Run Detekt
-        command: ./gradlew detekt
+          # run detekt to check for code smell and static analysis
+          name: Run Detekt
+          command: ./gradlew detekt
       - run:
-        # run ktlint to check kotlin code for kotlin standards
-        name: Run Ktlint
-        command: ./gradlew ktlint
+          # run ktlint to check kotlin code for kotlin standards
+          name: Run Ktlint
+          command: ./gradlew ktlint
       - run:
-        # run lint to check all code fits code standards
-        name: Run Lint
-        command: ./gradlew lintDevDebug
+          # run lint to check all code fits code standards
+          name: Run Lint
+          command: ./gradlew lintDevDebug
     # save updated cache
       - save_cache:
-        paths:
-          - ~/.gradle
-        key: gradle-{{ checksum "build.gradle.kts" }}
+          paths:
+            - ~/.gradle
+          key: gradle-{{ checksum "build.gradle.kts" }}
