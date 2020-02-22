@@ -1,26 +1,43 @@
 
 version: 2.1
 jobs:
-  build:
-    working_directory: ~/Woodsman
-    docker:
-      # running an image of android 10
-      - image: circleci/android:api-29
-    steps:
-      - checkout
-      # load project dependencies from cache
-      - restore_cache:
-          key: gradle-{{ checksum "build.gradle.kts" }}
-      - run:
-          # give circleci permission to run files
-          name: CHMOD permissions
-          command: chmod +x ./gradlew
-      - run:
-          # make sure the project builds
-          name: Build Project
-          command: ./gradlew build
-      # save updated cache
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: gradle-{{ checksum "build.gradle.kts" }}
+dbuild:
+  working_directory: ~/Woodsman
+  docker:
+  # running an image of android 10
+  - image: circleci/android:api-29
+  steps:
+  - checkout
+  # load project dependencies from cache
+  # https://circleci.com/docs/2.0/caching/
+  - restore_cache:
+    key: gradle-{{ checksum "build.gradle.kts" }}
+  - run:
+    # give circleci permission to run files
+    name: CHMOD permissions
+    command: chmod +x ./gradlew
+  - run:
+    # make sure the project builds
+    name: Build Project
+    command: ./gradlew build
+  - run:
+    # run all unit tests
+    name: Run Unit Tests
+    command: ./gradlew test
+  - run:
+    # run detekt to check for code smell and static analysis
+    name: Run Detekt
+    command: ./gradlew detekt
+  - run:
+    # run ktlint to check kotlin code for kotlin standards
+    name: Run Ktlint
+    command: ./gradlew ktlint
+  - run:
+    # run lint to check all code fits code standards
+    name: Run Lint
+    command: ./gradlew lint
+  # save updated cache
+  - save_cache:
+    paths:
+      - ~/.gradle
+    key: gradle-{{ checksum "build.gradle.kts" }}
