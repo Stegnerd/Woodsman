@@ -36,10 +36,10 @@ jobs:
           # run all unit tests
           name: Run Unit Tests
           command: ./gradlew test
-      - run:
+      #- run:
           # make sure the project builds
-          name: Build Project
-          command: ./gradlew build
+          #name: Build Project
+          #command: ./gradlew build
     # save updated cache
       - save_cache:
           paths:
