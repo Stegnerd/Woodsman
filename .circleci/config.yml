@@ -17,14 +17,6 @@ jobs:
           name: CHMOD permissions
           command: chmod +x ./gradlew
       - run:
-          # make sure the project builds
-          name: Build Project
-          command: ./gradlew build
-      - run:
-          # run all unit tests
-          name: Run Unit Tests
-          command: ./gradlew test
-      - run:
           # run detekt to check for code smell and static analysis
           name: Run Detekt
           command: ./gradlew detekt
@@ -40,6 +32,14 @@ jobs:
           # run spotless to format kotlin code
           name: RUN Spotless
           command: ./gradlew spotlessKotlinCheck
+      - run:
+          # run all unit tests
+          name: Run Unit Tests
+          command: ./gradlew test
+      - run:
+          # make sure the project builds
+          name: Build Project
+          command: ./gradlew build
     # save updated cache
       - save_cache:
           paths:
