@@ -5,8 +5,10 @@ import extensions.implementation
 
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
+    id(BuildPlugins.JACOCO)
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    id(BuildPlugins.GRAPH_GENERATOR)
 }
 
 android {
@@ -79,6 +81,12 @@ android {
             java.srcDir("src/androidTest/kotlin")
         }
     }
+}
+
+// Code coverage configuration
+junitJacoco {
+    // Whether or not classes without source location should be instrumented.
+    includeNoLocationClasses = true
 }
 
 dependencies {

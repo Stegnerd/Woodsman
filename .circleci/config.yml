@@ -30,16 +30,20 @@ jobs:
           command: ./gradlew lintDevDebug
       - run:
           # run spotless to format kotlin code
-          name: RUN Spotless
+          name: Run Spotless
           command: ./gradlew spotlessKotlinCheck
       - run:
           # run all unit tests
           name: Run Unit Tests
-          command: ./gradlew test
-      #- run:
+          command: ./gradlew testDevDebugUnitTest
+      - run:
+          # run jacoco to generate code coverage
+          name: Generate Code Coverage
+          command: ./gradlew jacocoTestReportDevDebug
+      - run:
           # make sure the project builds
-          #name: Build Project
-          #command: ./gradlew build
+          name: Build Project
+          command: ./gradlew build
     # save updated cache
       - save_cache:
           paths:

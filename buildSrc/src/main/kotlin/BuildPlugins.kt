@@ -11,7 +11,9 @@ object BuildPlugins {
 
     // Plugins
     const val DETEKT = "plugins.detekt" // Checks for code smell
-    const val DOKKA =  "plugins.dokka" // Generates documentation
+    const val DOKKA = "plugins.dokka" // Generates documentation
+    const val GRAPH_GENERATOR = "com.vanniktech.dependency.graph.generator" // Dependency graph generator
+    const val JACOCO = "com.vanniktech.android.junit.jacoco" // Code coverage
     const val KTLINT = "plugins.ktlint" // Kotlin linter
     const val SPOTLESS = "plugins.spotless" // Formatter
 }

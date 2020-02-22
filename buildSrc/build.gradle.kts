@@ -10,6 +10,8 @@ repositories{
     mavenCentral()
 
     // needed for custom plugin configuration
+
+    maven("https://oss.sonatype.org/content/repositories/snapshots")
     maven("https://plugins.gradle.org/m2/")
 }
 
@@ -26,6 +28,8 @@ object PluginVersions {
     const val DOKKA = "0.10.0"
     const val KTLINT = "0.36.0"
     const val SPOTLESS = "3.27.1"
+    const val JACOCO = "0.16.0-SNAPSHOT"
+    const val GRAPH_GENERATOR = "0.6.0-SNAPSHOT"
 }
 
 dependencies {
@@ -37,4 +41,8 @@ dependencies {
     implementation("org.jetbrains.dokka:dokka-gradle-plugin:${PluginVersions.DOKKA}")
     implementation("com.pinterest:ktlint:${PluginVersions.KTLINT}")
     implementation("com.diffplug.spotless:spotless-plugin-gradle:${PluginVersions.SPOTLESS}")
+
+    // Code coverage
+    implementation("com.vanniktech:gradle-android-junit-jacoco-plugin:${PluginVersions.JACOCO}")
+    implementation("com.vanniktech:gradle-dependency-graph-generator-plugin:${PluginVersions.GRAPH_GENERATOR}")
 }
