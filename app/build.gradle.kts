@@ -63,7 +63,11 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    // TODO add lint congfig here
+    lintOptions {
+        lintConfig = rootProject.file(".lint/config.xml")
+        isCheckAllWarnings = true
+        isWarningsAsErrors = true
+    }
 
     testOptions {
         unitTests.isIncludeAndroidResources = true
