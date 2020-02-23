@@ -42,10 +42,14 @@ jobs:
           # run jacoco to generate code coverage
           name: Generate Code Coverage
           command: ./gradlew jacocoTestReportDevDebug
-      - run:
+      #- run:
           # make sure the project builds
-          name: Build Project
-          command: ./gradlew build
+          #name: Build Project
+          #command: ./gradlew build
+      - codecov/upload:
+          # Upload coverage to codecov
+          flags: unittest
+          conf: .codecov/config.yml
     # save updated cache
       - save_cache:
           paths:
