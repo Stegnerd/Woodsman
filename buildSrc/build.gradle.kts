@@ -41,8 +41,6 @@ dependencies {
     implementation("org.jetbrains.dokka:dokka-gradle-plugin:${PluginVersions.DOKKA}")
     implementation("com.pinterest:ktlint:${PluginVersions.KTLINT}")
     implementation("com.diffplug.spotless:spotless-plugin-gradle:${PluginVersions.SPOTLESS}")
-
-    // Code coverage
     implementation("com.vanniktech:gradle-android-junit-jacoco-plugin:${PluginVersions.JACOCO}")
     implementation("com.vanniktech:gradle-dependency-graph-generator-plugin:${PluginVersions.GRAPH_GENERATOR}")
 }
