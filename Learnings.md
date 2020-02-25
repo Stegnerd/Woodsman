@@ -6,7 +6,8 @@ https://github.com/VMadalin/kotlin-sample-app .
 So far these are the things that I have learned from developing this app based off
 of the aforementioned app:
 
-1. Using kotlin dsl as opposed to groovy files.
+## 1
+ Using kotlin dsl as opposed to groovy files.
     here are the benefits:
         1. Using one language instead of having to learn groovy as well
         2. Code completion and error detection at compile time of gradle files (statically typed)
@@ -15,7 +16,8 @@ of the aforementioned app:
         1. There are waaaay more groovy examples of things
         2. Writing tasks is a little confusing.
 
-2. Modular app architecture/ kotlin dependency management.
+## 2
+Modular app architecture/ kotlin dependency management.
     1. main app dependencies are stored in buildSrc
         this is where we configured the main common dependencies, plugins, and default android
         configuration
