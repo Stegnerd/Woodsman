@@ -1,0 +1,21 @@
+# EditorConfig: http://editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Insert new line to every file
+[*]
+insert_final_newline = true
+
+# Every yaml and json use spaces with indent of 2
+[*.{yml, json}]
+indent_style = space
+indent_size = 2
+
+# Every Kotlin or Java file use spaces with indent of 4[
+# Disable import order warning -> https://www.reddit.com/r/Kotlin/comments/cr76zs/imports_must_be_ordered_in_lexicographic_order/
+[*.{kt, kts, java}]
+indent_style = space
+indent_size = 4
+max_line_length = 200
+disabled_rules=import-ordering
