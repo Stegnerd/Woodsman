@@ -8,6 +8,9 @@ object BuildDependenciesVersions {
     const val CORE_KTX = "1.1.0"
     const val CONSTRAINT_LAYOUT = "1.1.3"
 
+    // FireBase & Google
+    const val FIREBASE_ANALYTICS = "17.2.2"
+
     // Tests
     const val TEST = "1.2.0"
     const val ESPRESSO = "3.2.0"

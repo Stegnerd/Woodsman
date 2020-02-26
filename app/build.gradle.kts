@@ -9,6 +9,7 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
     id(BuildPlugins.GRAPH_GENERATOR)
+    id(BuildPlugins.GOOGLE_SERVICES)
 }
 
 android {
@@ -98,6 +99,9 @@ dependencies {
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.CONSTRAIN_LAYOUT)
+
+    // Firebase & Google
+    implementation(Dependencies.FIREBASE_ANALYTICS)
 
     addTestDependencies()
 }

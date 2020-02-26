@@ -8,6 +8,9 @@ object BuildPlugins {
     const val KOTLIN_ANDROID_EXTENSIONS = "kotlin-android-extensions"
     const val KOTLIN_KAPT = "kotlin-kapt"
 
+    // Firebase & Google
+    const val GOOGLE_SERVICES = "com.google.gms.google-services"
+
 
     // Plugins
     const val DETEKT = "plugins.detekt" // Checks for code smell

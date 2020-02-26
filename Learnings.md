@@ -7,7 +7,7 @@ So far these are the things that I have learned from developing this app based o
 of the aforementioned app:
 
 ## 1
- Using kotlin dsl as opposed to groovy files.
+Using kotlin dsl as opposed to groovy files.
     here are the benefits:
         1. Using one language instead of having to learn groovy as well
         2. Code completion and error detection at compile time of gradle files (statically typed)
@@ -27,3 +27,7 @@ Modular app architecture/ kotlin dependency management.
             https://guides.gradle.org/migrating-build-logic-from-groovy-to-kotlin/
             if you use the imperative apply() function to apply a plugin,
             then you will have to use the configure<T>() function to configure that plugin
+
+## 3
+When having multiple build flavors you need to extend the google-services
+to have extra groups in the client array. ie dev, qa, production

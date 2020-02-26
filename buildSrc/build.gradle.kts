@@ -20,8 +20,11 @@ kotlinDslPluginOptions{
 }
 
 object PluginVersions {
-    const val GRADLE_ANDROID = "3.6.0-rc03"
+    const val GRADLE_ANDROID = "3.6.0"
     const val KOTLIN = "1.3.61"
+
+    // Firebase & Google
+    const val GOOGLE_SERVICES = "4.3.3"
 
     // Plugins
     const val DETEKT = "1.2.2"
@@ -35,6 +38,9 @@ object PluginVersions {
 dependencies {
     implementation("com.android.tools.build:gradle:${PluginVersions.GRADLE_ANDROID}")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginVersions.KOTLIN}")
+
+    // Firebase & Google
+    implementation("com.google.gms:google-services:${PluginVersions.GOOGLE_SERVICES}")
 
     // plugins
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginVersions.DETEKT}")
