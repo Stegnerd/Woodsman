@@ -31,3 +31,10 @@ Modular app architecture/ kotlin dependency management.
 ## 3
 When having multiple build flavors you need to extend the google-services
 to have extra groups in the client array. ie dev, qa, production
+
+## 4
+When adding the google-services.json to the project but not in version control
+that causes CircleCI to fail. In order to get around that I did the following
+stackoverflow: https://stackoverflow.com/questions/50662772/circleci-build-fails-because-google-services-json-is-not-present/60406915#60406915
+tl:dr, save the contents as a base64 string for an environment variable in CircleCI and export to bash from there
+then decode it and place it as a file in the appropriate place.
