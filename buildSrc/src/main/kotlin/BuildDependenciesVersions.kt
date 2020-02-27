@@ -10,6 +10,7 @@ object BuildDependenciesVersions {
 
     // FireBase & Google
     const val FIREBASE_ANALYTICS = "17.2.2"
+    const val FIREBASE_CRASHLYTICS = "17.0.0-beta01"
 
     // Tests
     const val TEST = "1.2.0"

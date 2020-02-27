@@ -10,7 +10,6 @@ repositories{
     mavenCentral()
 
     // needed for custom plugin configuration
-
     maven("https://oss.sonatype.org/content/repositories/snapshots")
     maven("https://plugins.gradle.org/m2/")
 }
@@ -25,6 +24,7 @@ object PluginVersions {
 
     // Firebase & Google
     const val GOOGLE_SERVICES = "4.3.3"
+    const val FIREBASE_CRASHLYTICS = "2.0.0-beta02"
 
     // Plugins
     const val DETEKT = "1.2.2"
@@ -41,6 +41,7 @@ dependencies {
 
     // Firebase & Google
     implementation("com.google.gms:google-services:${PluginVersions.GOOGLE_SERVICES}")
+    implementation("com.google.firebase:firebase-crashlytics-gradle:${PluginVersions.FIREBASE_CRASHLYTICS}")
 
     // plugins
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginVersions.DETEKT}")

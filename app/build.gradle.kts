@@ -10,6 +10,7 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
     id(BuildPlugins.GRAPH_GENERATOR)
     id(BuildPlugins.GOOGLE_SERVICES)
+    id(BuildPlugins.FIREBASE_CRASHLYTICS)
 }
 
 android {
@@ -102,6 +103,7 @@ dependencies {
 
     // Firebase & Google
     implementation(Dependencies.FIREBASE_ANALYTICS)
+    implementation(Dependencies.FIREBASE_CRASHLYTICS)
 
     addTestDependencies()
 }

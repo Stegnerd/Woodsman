@@ -10,7 +10,7 @@ object BuildPlugins {
 
     // Firebase & Google
     const val GOOGLE_SERVICES = "com.google.gms.google-services"
-
+    const val FIREBASE_CRASHLYTICS = "com.google.firebase.crashlytics"
 
     // Plugins
     const val DETEKT = "plugins.detekt" // Checks for code smell
