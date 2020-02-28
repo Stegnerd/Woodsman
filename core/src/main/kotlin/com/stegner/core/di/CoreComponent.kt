@@ -19,5 +19,4 @@ interface CoreComponent {
      * @return Context
      */
     fun context(): Context
-
 }
