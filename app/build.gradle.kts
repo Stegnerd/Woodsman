@@ -1,13 +1,16 @@
 
 import dependencies.Dependencies
+import dependencies.AnnotationProcessorsDependencies
 import extensions.addTestDependencies
 import extensions.implementation
+import extensions.kapt
 
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     id(BuildPlugins.JACOCO)
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
+    id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.GRAPH_GENERATOR)
     id(BuildPlugins.GOOGLE_SERVICES)
     id(BuildPlugins.FIREBASE_CRASHLYTICS)
@@ -105,6 +108,8 @@ dependencies {
     implementation(Dependencies.FIREBASE_ANALYTICS)
     implementation(Dependencies.FIREBASE_AUTH)
     implementation(Dependencies.FIREBASE_CRASHLYTICS)
+
+    kapt(AnnotationProcessorsDependencies.DAGGER)
 
     addTestDependencies()
 }

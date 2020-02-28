@@ -6,7 +6,9 @@ import ProductFlavorDev
 import ProductFlavorQa
 import ProductFlavorProduction
 import dependencies.Dependencies
+import dependencies.AnnotationProcessorsDependencies
 import extensions.implementation
+import extensions.kapt
 import extensions.addTestDependencies
 
 /**
@@ -79,6 +81,8 @@ dependencies {
     implementation(Dependencies.DAGGER)
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.TIMBER)
+
+    kapt(AnnotationProcessorsDependencies.DAGGER)
 
     addTestDependencies()
 }
