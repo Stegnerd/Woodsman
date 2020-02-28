@@ -10,7 +10,6 @@ import javax.inject.Singleton
  * @see Component
  */
 @Singleton
-@Component(modules = [])
 interface CoreComponent {
 
     /**
