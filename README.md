@@ -30,6 +30,10 @@ Here are the following goals for this app:
 
 ## Setup
 
+Things that will be required in order to get the app setup and running.
+
+1. Set up application in Firebase, steps 1-4: https://firebase.google.com/docs/android/setup
+
 ## Architecture
 
 ### Libraries

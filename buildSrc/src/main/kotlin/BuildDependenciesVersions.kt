@@ -7,9 +7,12 @@ object BuildDependenciesVersions {
     const val APPCOMPAT = "1.1.0"
     const val CORE_KTX = "1.1.0"
     const val CONSTRAINT_LAYOUT = "1.1.3"
+    const val DAGGER = "2.25.3"
+    const val TIMBER = "4.7.1"
 
     // FireBase & Google
     const val FIREBASE_ANALYTICS = "17.2.2"
+    const val FIREBASE_AUTH = "19.2.0"
     const val FIREBASE_CRASHLYTICS = "17.0.0-beta01"
 
     // Tests

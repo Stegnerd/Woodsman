@@ -103,6 +103,7 @@ dependencies {
 
     // Firebase & Google
     implementation(Dependencies.FIREBASE_ANALYTICS)
+    implementation(Dependencies.FIREBASE_AUTH)
     implementation(Dependencies.FIREBASE_CRASHLYTICS)
 
     addTestDependencies()

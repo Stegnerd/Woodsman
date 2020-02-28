@@ -76,7 +76,9 @@ junitJacoco {
 }
 
 dependencies {
+    implementation(Dependencies.DAGGER)
     implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.TIMBER)
 
     addTestDependencies()
 }
