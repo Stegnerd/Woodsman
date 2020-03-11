@@ -1,6 +1,9 @@
 package com.stegner.core.di
 
 import android.content.Context
+import com.google.firebase.auth.FirebaseAuth
+import com.stegner.core.di.modules.ContextModule
+import com.stegner.core.di.modules.NetworkModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -10,6 +13,10 @@ import javax.inject.Singleton
  * @see Component
  */
 @Singleton
+@Component(modules = [
+    ContextModule::class,
+    NetworkModule::class
+])
 interface CoreComponent {
 
     /**
@@ -18,4 +25,11 @@ interface CoreComponent {
      * @return Context
      */
     fun context(): Context
+
+    /**
+     * Provides dependency FirebaseAuth
+     *
+     * @return
+     */
+    fun firebaseAuth(): FirebaseAuth
 }

@@ -78,6 +78,9 @@ junitJacoco {
 }
 
 dependencies {
+    implementation(Dependencies.COROUTINES)
+    implementation(Dependencies.COROUTINES_ANDROID)
+    implementation(Dependencies.COROUTINES_PLAY_SERVICES)
     implementation(Dependencies.DAGGER)
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.TIMBER)

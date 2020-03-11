@@ -9,4 +9,5 @@ plugins {
 
 dependencies {
     implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.FIREBASE_AUTH)
 }

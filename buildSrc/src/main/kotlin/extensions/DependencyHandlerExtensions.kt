@@ -70,12 +70,16 @@ fun DependencyHandler.androidTestImplementation(dependencyNotation: String): Dep
  */
 fun DependencyHandler.addTestDependencies(){
     // Unit tests
-    testImplementation(TestDependencies.JUNIT)
+    testImplementation(TestDependencies.ARCH_CORE)
     testImplementation(TestDependencies.EXT)
+    testImplementation(TestDependencies.JUNIT)
+    testImplementation(TestDependencies.MOCKK)
+    testImplementation(TestDependencies.MOCKITO)
     testImplementation(TestDependencies.RUNNER)
 
     // Instrumentation Tests
-    androidTestImplementation(TestAndroidDependencies.RUNNER)
-    androidTestImplementation(TestAndroidDependencies.JUNIT)
     androidTestImplementation(TestAndroidDependencies.ESPRESSO)
+    androidTestImplementation(TestAndroidDependencies.JUNIT)
+    androidTestImplementation(TestAndroidDependencies.MOCKITO)
+    androidTestImplementation(TestAndroidDependencies.RUNNER)
 }

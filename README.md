@@ -40,6 +40,16 @@ Things that will be required in order to get the app setup and running.
 
 ## Resources
 
+Here is a list of resources that helped me with design choices.
+
+- [Firebase Auth](https://joebirch.co/2019/10/03/using-firebase-on-android-with-kotlin-coroutines/)
+    This great article had a nice implementation with coroutines and firebase in a repo wrapper
+- [Mock unit testing](https://stackoverflow.com/questions/40979402/mock-final-class-with-mockito-2)
+    This helps give a great explanation why this seemingly random extension is needed for mocking
+    final classes.
+- [Kotlin Mock Annotations With DSL](https://mockk.io/#dsl-examples)
+    This explains the difference in setup for unnit tests and mockking classes and methods
+
 ### Projects
 
 This is a list of projects that I drew examples or implementation from.
