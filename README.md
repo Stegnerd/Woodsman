@@ -50,6 +50,14 @@ Here is a list of resources that helped me with design choices.
 - [Kotlin Mock Annotations With DSL](https://mockk.io/#dsl-examples)
     This explains the difference in setup for unnit tests and mockking classes and methods
 
+
+## Todos
+
+This is a list of things that I am stumped on and will need to visit at a later time
+1. FirebaseAuth mockk for Auth Service. As it stands this file is excluded from code coverage. It is simple enough
+   that it didn't warrant being stuck for so long. It has no logic and is just used in AuthRepository. I was
+   having trouble passing values into the mock.
+
 ### Projects
 
 This is a list of projects that I drew examples or implementation from.

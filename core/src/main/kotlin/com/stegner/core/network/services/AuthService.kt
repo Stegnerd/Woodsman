@@ -4,7 +4,6 @@ import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.PRIVATE
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.stegner.core.network.responses.BaseResponse
 import kotlinx.coroutines.tasks.await
 
 /**
@@ -22,20 +21,10 @@ class AuthService(@VisibleForTesting(otherwise = PRIVATE)internal val firebase: 
      * @param password Password of the user logging in
      * @return An instance of [FirebaseUser] or null
      */
-    suspend fun login(email: String, password: String): BaseResponse<FirebaseUser?> {
+    suspend fun login(email: String, password: String) {
         // by using await (which is using google services api wrapper) able to wait for action to be done
         // before attempting to check  and can launch this with Kotlin coroutine in viewmodel
         firebase.signInWithEmailAndPassword(email, password).await()
-
-        val user = firebase.currentUser
-
-        // If user successfully logged in return user
-        // otherwise return null
-        return if (user != null) {
-            BaseResponse(true, user)
-        } else {
-            BaseResponse(false, null)
-        }
     }
 
     /**
@@ -45,18 +34,10 @@ class AuthService(@VisibleForTesting(otherwise = PRIVATE)internal val firebase: 
      * @param password Password of the user attempting to sign up
      * @return An instance of [FirebaseUser] or null
      */
-    suspend fun register(email: String, password: String): BaseResponse<FirebaseUser?> {
+    suspend fun register(email: String, password: String) {
         // by using await (which is using google services api wrapper) able to wait for action to be done
         // before attempting to check  and can launch this with Kotlin coroutine in viewmodel
         firebase.createUserWithEmailAndPassword(email, password).await()
-
-        val user = firebase.currentUser
-
-        return if (user != null) {
-            BaseResponse(true, user)
-        } else {
-            BaseResponse(false, null)
-        }
     }
 
     /**
@@ -67,5 +48,7 @@ class AuthService(@VisibleForTesting(otherwise = PRIVATE)internal val firebase: 
     /**
      * Gets instance of user currently signed in
      */
-    fun currentUser(): FirebaseUser? = firebase.currentUser
+    fun currentUser(): FirebaseUser? {
+        return firebase.currentUser
+    }
 }

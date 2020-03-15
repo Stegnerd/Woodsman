@@ -3,6 +3,7 @@ package com.stegner.core.di
 import com.google.firebase.auth.FirebaseAuth
 import com.nhaarman.mockitokotlin2.mock
 import com.stegner.core.di.modules.NetworkModule
+import com.stegner.core.network.services.AuthService
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic
@@ -38,5 +39,13 @@ class NetworkModuleTest {
         val authService = networkModule.provideAuthService(firebaseAuth)
 
         assertEquals(authService.firebase, firebaseAuth)
+    }
+
+    @Test
+    fun verifyProvideAuthRepository() {
+        val authService = mock<AuthService>()
+        val authRepository = networkModule.providesAuthRepository(authService)
+
+        assertEquals(authService, authRepository.service)
     }
 }
