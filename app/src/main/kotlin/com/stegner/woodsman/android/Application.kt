@@ -43,7 +43,6 @@ class Application : SplitCompatApplication() {
         initAppDependencyInjection()
     }
 
-
     // ====================================
     // Private init methods
     // ====================================
@@ -51,8 +50,8 @@ class Application : SplitCompatApplication() {
     /**
      * Initialize log library Timber only on debug build.
      */
-    private fun initTimber(){
-        if(BuildConfig.DEBUG) {
+    private fun initTimber() {
+        if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
     }
@@ -70,7 +69,7 @@ class Application : SplitCompatApplication() {
     /**
      * Initialize app dependency injection component.
      */
-    private fun initAppDependencyInjection(){
+    private fun initAppDependencyInjection() {
         DaggerAppComponent
             .builder()
             .coreComponent(coreComponent)
