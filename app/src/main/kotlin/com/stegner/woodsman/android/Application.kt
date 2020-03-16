@@ -5,7 +5,6 @@ import com.google.android.play.core.splitcompat.SplitCompatApplication
 import com.stegner.core.di.CoreComponent
 import com.stegner.core.di.DaggerCoreComponent
 import com.stegner.core.di.modules.ContextModule
-import com.stegner.woodsman.BuildConfig
 import com.stegner.woodsman.android.di.DaggerAppComponent
 import timber.log.Timber
 
