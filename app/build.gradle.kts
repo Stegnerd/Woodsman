@@ -100,9 +100,13 @@ junitJacoco {
 
 dependencies {
     implementation(project(BuildModules.CORE))
-    implementation(Dependencies.KOTLIN)
+
     implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.CONSTRAIN_LAYOUT)
+    implementation(Dependencies.DAGGER)
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.PLAY_CORE)
+    implementation(Dependencies.TIMBER)
 
     // Firebase & Google
     implementation(Dependencies.FIREBASE_ANALYTICS)

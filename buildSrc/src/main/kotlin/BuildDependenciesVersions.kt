@@ -10,9 +10,10 @@ object BuildDependenciesVersions {
     const val COROUTINES_PLAY_SERVICES = "1.1.1"
     const val CONSTRAINT_LAYOUT = "1.1.3"
     const val DAGGER = "2.25.3"
+    const val PLAY_CORE = "1.6.4"
     const val TIMBER = "4.7.1"
 
-    // FireBase & Google
+    // FireBase
     const val FIREBASE_ANALYTICS = "17.2.2"
     const val FIREBASE_AUTH = "19.2.0"
     const val FIREBASE_CRASHLYTICS = "17.0.0-beta01"
