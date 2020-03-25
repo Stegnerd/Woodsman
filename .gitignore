@@ -1,6 +1,7 @@
 *.iml
 .gradle
 build/
+/projectFilesBackup
 /local.properties
 /.idea
 /.idea/caches

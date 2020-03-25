@@ -18,5 +18,6 @@ object BuildPlugins {
     const val GRAPH_GENERATOR = "com.vanniktech.dependency.graph.generator" // Dependency graph generator
     const val JACOCO = "com.vanniktech.android.junit.jacoco" // Code coverage
     const val KTLINT = "plugins.ktlint" // Kotlin linter
+    const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin" // fragment navigation
     const val SPOTLESS = "plugins.spotless" // Formatter
 }

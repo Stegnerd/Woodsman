@@ -21,6 +21,7 @@ kotlinDslPluginOptions{
 object PluginVersions {
     const val GRADLE_ANDROID = "3.6.0"
     const val KOTLIN = "1.3.61"
+    const val NAVIGATION = "2.1.0"
 
     // Firebase & Google
     const val GOOGLE_SERVICES = "4.3.3"
@@ -38,6 +39,7 @@ object PluginVersions {
 dependencies {
     implementation("com.android.tools.build:gradle:${PluginVersions.GRADLE_ANDROID}")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginVersions.KOTLIN}")
+    implementation("androidx.navigation:navigation-safe-args-gradle-plugin:${PluginVersions.NAVIGATION}")
 
     // Firebase & Google
     implementation("com.google.gms:google-services:${PluginVersions.GOOGLE_SERVICES}")

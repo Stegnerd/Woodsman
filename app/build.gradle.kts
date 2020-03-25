@@ -7,13 +7,14 @@ import extensions.kapt
 
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
+    id(BuildPlugins.FIREBASE_CRASHLYTICS)
     id(BuildPlugins.JACOCO)
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_ANDROID_EXTENSIONS)
     id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.GRAPH_GENERATOR)
     id(BuildPlugins.GOOGLE_SERVICES)
-    id(BuildPlugins.FIREBASE_CRASHLYTICS)
+    id(BuildPlugins.NAVIGATION_SAFE_ARGS)
 }
 
 android {
@@ -49,7 +50,9 @@ android {
         ProductFlavorProduction.appCreate(this)
     }
 
-    // TODO Add dynamic features here
+    dynamicFeatures = mutableSetOf(
+        BuildModules.Features.AUTHENTICATION
+    )
 
     dataBinding {
         isEnabled = true

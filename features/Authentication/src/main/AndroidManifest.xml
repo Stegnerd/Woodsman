@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.stegner.dynamicfeatures.authentication">
+
+    <!-- Specifies whether the module should be available through Google Play Instant as an instant experience. -->
+    <dist:module
+        dist:instant="true"
+        dist:title="@string/feature_authentication">
+        <!-- Encapsulates options that customizes module delivery, as shown below. Keep in mind, each dynamic feature module must configure only one type of these custom delivery options -->
+        <dist:delivery>
+            <!-- Specifies that the module should be available at install time. This is the default behavior for dynamic feature modules that do not specify another type of custom delivery option.  -->
+            <dist:install-time />
+        </dist:delivery>
+        <!-- Specifies whether to include the module in multi-APKs that target devices running Android 4.4 (API level 20) and lower.  -->
+        <dist:fusing dist:include="false" />
+    </dist:module>
+
+    <application
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup,MissingApplicationIcon"/>
+
+</manifest>

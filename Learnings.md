@@ -38,3 +38,12 @@ that causes CircleCI to fail. In order to get around that I did the following
 stackoverflow: https://stackoverflow.com/questions/50662772/circleci-build-fails-because-google-services-json-is-not-present/60406915#60406915
 tl:dr, save the contents as a base64 string for an environment variable in CircleCI and export to bash from there
 then decode it and place it as a file in the appropriate place.
+
+## 5
+Dynamic features.
+Dynamic features are used to create smaller APK downloads for users. It helps bundle together only features that
+the user needs or has the ability to use. For example a premium and free option of an app. A free version has no
+reason to download the features that it cannot use. Another example is why does a smaller phone need to
+download res objects for different sizes that it wont use! The play store does this automatically for you!
+Here is the docs on setting up dynamic features!
+https://developer.android.com/guide/app-bundle/dynamic-delivery
