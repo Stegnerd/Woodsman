@@ -29,5 +29,6 @@ object BuildDependenciesVersions {
     const val JUNIT = "4.12"
     const val MOCKITO = "2.2.0"
     const val MOCKK = "1.9.3"
+    const val ROBOELECTRIC = "4.3.1"
     const val TEST = "1.2.0"
 }

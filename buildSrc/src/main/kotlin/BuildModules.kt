@@ -8,4 +8,8 @@ object BuildModules {
     object Features {
         const val AUTHENTICATION = ":features:authentication"
     }
+
+    object Common {
+        const val UI = ":commons:ui"
+    }
 }

@@ -3,8 +3,9 @@
 
 include(
     ":app",
+    ":common:ui",
     ":core",
-    "features:authentication"
+    ":features:authentication"
 )
 
 
