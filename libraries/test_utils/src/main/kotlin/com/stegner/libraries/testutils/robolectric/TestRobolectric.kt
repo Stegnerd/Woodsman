@@ -8,7 +8,6 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
-
 @RunWith(RobolectricTestRunner::class)
 @Config(
     manifest = "AndroidManifest.xml",
@@ -25,5 +24,5 @@ open class TestRobolectric {
         application
     }
 
-    internal class ApplicationStub: Application()
+    internal class ApplicationStub : Application()
 }

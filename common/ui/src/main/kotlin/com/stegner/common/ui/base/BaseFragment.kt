@@ -21,7 +21,7 @@ import javax.inject.Inject
  * @param layoutId Layout resource reference identifier.
  * @see Fragment
  */
-abstract class BaseFragment<B: ViewDataBinding, M: ViewModel>(@LayoutRes private val layoutId: Int) : Fragment() {
+abstract class BaseFragment<B : ViewDataBinding, M : ViewModel>(@LayoutRes private val layoutId: Int) : Fragment() {
 
     /**
      * Container of data for the view
@@ -99,7 +99,7 @@ abstract class BaseFragment<B: ViewDataBinding, M: ViewModel>(@LayoutRes private
     fun requireCompatActivity(): AppCompatActivity {
         requireActivity()
         val activity = requireActivity()
-        if(activity is AppCompatActivity) {
+        if (activity is AppCompatActivity) {
             return activity
         } else {
             throw TypeCastException("Main activity should extend from 'AppCompatActivity'")
