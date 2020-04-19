@@ -8,6 +8,12 @@ jobs:
     docker:
     # running an image of android 10
       - image: circleci/android:api-29
+    environment:
+      # Control gradle heap size and
+      # -Dorg.gradle.daemon disables daemon for environment
+      GRADLE_OPTS: -Xmx4g -Dorg.gradle.daemon=false
+      # This is used to control jvm heap size 4 gb
+      JVM_OPTS: -Xmx4g
     steps:
       - checkout
     # load project dependencies from cache
