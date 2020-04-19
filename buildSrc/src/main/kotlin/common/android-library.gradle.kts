@@ -10,6 +10,7 @@ import dependencies.AnnotationProcessorsDependencies
 import extensions.implementation
 import extensions.kapt
 import extensions.addTestDependencies
+import extensions.testImplementation
 
 /**
  * This is default android configuration of the app.
@@ -87,5 +88,6 @@ dependencies {
 
     kapt(AnnotationProcessorsDependencies.DAGGER)
 
+    testImplementation(project(BuildModules.Libraries.TEST_UTILS))
     addTestDependencies()
 }

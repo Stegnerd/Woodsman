@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stegner.libraries.testutils">
+
+    <application android:theme="@style/Theme.AppCompat">
+
+        <activity android:name=".TestFragmentActivity" />
+
+    </application>
+
+</manifest>

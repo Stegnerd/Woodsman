@@ -109,5 +109,6 @@ dependencies {
     kapt(AnnotationProcessorsDependencies.DAGGER)
     kapt(AnnotationProcessorsDependencies.DATABINDING)
 
+    testImplementation(project(BuildModules.Libraries.TEST_UTILS))
     addTestDependencies()
 }

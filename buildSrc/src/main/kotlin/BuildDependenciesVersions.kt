@@ -5,6 +5,7 @@ object BuildDependenciesVersions {
     const val KOTLIN = "1.3.61"
 
     const val APPCOMPAT = "1.1.0"
+    const val AUTO_SERVICE = "1.0-rc4"
     const val CORE_KTX = "1.1.0"
     const val COROUTINES = "1.3.3"
     const val COROUTINES_PLAY_SERVICES = "1.1.1"
@@ -24,11 +25,13 @@ object BuildDependenciesVersions {
 
     // Tests
     const val ARCH_CORE = "2.1.0"
+    const val ASSERTJ = "3.14.0"
     const val ESPRESSO = "3.2.0"
     const val EXT = "1.1.1"
+    const val FRAGMENT_TEST = "1.2.0-alpha02"
     const val JUNIT = "4.12"
-    const val MOCKITO = "2.2.0"
     const val MOCKK = "1.9.3"
+    const val MOCKITO = "2.2.0"
     const val ROBOELECTRIC = "4.3.1"
     const val TEST = "1.2.0"
 }
