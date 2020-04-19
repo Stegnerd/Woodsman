@@ -10,7 +10,7 @@ object BuildModules {
     }
 
     object Common {
-        const val UI = ":commons:ui"
+        const val UI = ":common:ui"
     }
 
     object Libraries {
