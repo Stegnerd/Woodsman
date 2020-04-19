@@ -34,7 +34,7 @@ jobs:
       - run:
           # run ktlint to check kotlin code for kotlin standards
           name: Run Ktlint
-          command: ./gradlew ktlint
+          command: ./gradlew ktlint --debug
       - run:
           # run lint to check all code fits code standards
           name: Run Lint
