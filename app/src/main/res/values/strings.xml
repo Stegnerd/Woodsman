@@ -3,4 +3,5 @@
 
     <!-- dynamic module names-->
     <string name="feature_authentication">Authentication</string>
+    <string name="feature_home">Home</string>
 </resources>

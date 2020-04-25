@@ -6,6 +6,7 @@ include(
     ":common:ui",
     ":core",
     ":features:authentication",
+    ":features:home",
     ":libraries:test_utils"
 )
 

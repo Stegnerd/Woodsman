@@ -51,7 +51,8 @@ android {
     }
 
     dynamicFeatures = mutableSetOf(
-        BuildModules.Features.AUTHENTICATION
+        BuildModules.Features.AUTHENTICATION,
+        BuildModules.Features.HOME
     )
 
     dataBinding {

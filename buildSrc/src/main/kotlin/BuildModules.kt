@@ -7,6 +7,7 @@ object BuildModules {
 
     object Features {
         const val AUTHENTICATION = ":features:authentication"
+        const val HOME = ":features:home"
     }
 
     object Common {
