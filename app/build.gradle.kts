@@ -106,7 +106,7 @@ dependencies {
     implementation(project(BuildModules.CORE))
 
     implementation(Dependencies.APPCOMPAT)
-    implementation(Dependencies.CONSTRAIN_LAYOUT)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
     implementation(Dependencies.DAGGER)
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.PLAY_CORE)

@@ -9,16 +9,22 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!--
+        android:extractNativeLibs -> package uncompressed .so files in the APK. Makes it smaller
+        tools:targetApi -> Indicates that Lint should treat this type as targeting a given API level, no matter what the project target is
+     -->
     <application
         android:name=".Application"
         android:fullBackupContent="true"
         android:allowBackup="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="29">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -94,7 +94,7 @@ dependencies {
 
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.APPCOMPAT)
-    implementation(Dependencies.CONSTRAIN_LAYOUT)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.COROUTINES)
     implementation(Dependencies.COROUTINES_ANDROID)
